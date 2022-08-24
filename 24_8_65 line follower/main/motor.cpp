@@ -1,4 +1,4 @@
-
+#include<Arduino.h>
 class Motor
 {
 public:
@@ -33,8 +33,15 @@ public:
             digitalWrite(B_pin, LOW);
             analogWrite(PWM_pin, 0);
         }
+        if (speed == -999)
+        {
+            digitalWrite(A_pin, LOW);
+            digitalWrite(B_pin, LOW);
+            analogWrite(PWM_pin, 255);
+        }
     }
 };
+
 class Dual_motor
 {
 public:
@@ -48,6 +55,3 @@ private:
    Motor _L;
    Motor _R;
 };
-
-
-

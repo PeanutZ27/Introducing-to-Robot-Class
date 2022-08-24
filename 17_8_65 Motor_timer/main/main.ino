@@ -32,7 +32,7 @@ void m(int L,int R){
         digitalWrite(l1,LOW);digitalWrite(l2,HIGH);analogWrite(l,L-1);
     }
     if(L==0){
-        digitalWrite(l1,LOW);digitalWrite(l2,LOW);analogWrite(l,0);
+        digitalWrite(l1,HIGH);digitalWrite(l2,HIGH);analogWrite(l,0);
     }
     if(R>0){
         digitalWrite(r1,HIGH);digitalWrite(r2,LOW);analogWrite(r,R);
@@ -41,6 +41,6 @@ void m(int L,int R){
         digitalWrite(r1,LOW);digitalWrite(r2,HIGH);analogWrite(r,R-1);
     }
     if(R==0){
-        digitalWrite(r1,LOW);digitalWrite(r2,LOW);analogWrite(r,0);
+        digitalWrite(r1,HIGH);digitalWrite(r2,HIGH);analogWrite(r,0);
     }
 }

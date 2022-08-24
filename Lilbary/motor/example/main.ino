@@ -14,7 +14,6 @@ Dual_motor Dual(L_motor,R_motor);
 
 
 void setup(){
-  	
     Serial.begin(115200);
     Serial.println("Hello world");
     m(105,95);delay(1900);m(0,0);delay(500);
