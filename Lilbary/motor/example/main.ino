@@ -1,3 +1,4 @@
+#include<motor.cpp>
 // Motor A 
 int enA = 9;
 int in1 = 8;

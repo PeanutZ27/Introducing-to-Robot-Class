@@ -8,6 +8,8 @@ int enB = 11;
 int in3 = 13;
 int in4 = 12;
 
+int turn_ms = 20;
+
 Motor L_motor(in1,in2,enA);
 Motor R_motor(in3,in4,enB);
 Dual_motor Dual(L_motor,R_motor);
@@ -25,8 +27,8 @@ void loop(){
     int L = digitalRead(5);
     int R = digitalRead(4);
     if(L == 1 && R == 1){m(100,90);}
-    else if(L == 0 && R == 1){tl(90);}
-    else if(L == 1 && R == 0){tr(90);}
+    else if(L == 0 && R == 1){tl(90);delay(turn_ms);}
+    else if(L == 1 && R == 0){tr(90);delay(turn_ms);}
     else{stop(false);}
 }
 
